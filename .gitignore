@@ -1,0 +1,5 @@
+/bin/
+/dist/
+*.sarif
+hostwarden-demo.txt
+.hostwarden-baseline.json
