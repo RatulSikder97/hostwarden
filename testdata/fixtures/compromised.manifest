@@ -1,0 +1,25 @@
+# Permissions, ages and procfs links git cannot store. See internal/testutil.
+mode 0644 etc/shadow
+mode 0440 etc/sudoers
+mode 0666 run/docker.sock
+mode 0644 etc/ssh/ssh_host_ed25519_key
+mode 0640 home/deploy/.ssh/id_rsa
+mode 0664 home/deploy/.ssh/authorized_keys
+mode 4755 tmp/.ICE-unix/.s
+mode 4755 usr/bin/sudo
+mode 4755 usr/bin/find
+dir 1777 tmp
+dir 1777 tmp/.ICE-unix
+dir 0777 var/tmp/.cache
+age 3h root/.ssh/authorized_keys
+age 2h usr/bin/ls
+link proc/1/exe /usr/lib/systemd/systemd
+link proc/812/exe /usr/bin/redis-server
+link proc/812/fd/6 socket:[1001]
+link proc/900/exe /usr/bin/dockerd
+link proc/900/fd/3 socket:[1005]
+link proc/1500/exe /usr/sbin/sshd (deleted)
+link proc/1500/fd/3 socket:[1004]
+link proc/4242/exe /tmp/.X11-unix/.x/kdevtmpfsi (deleted)
+link proc/4242/fd/7 socket:[1003]
+link proc/4300/exe /var/tmp/.cache/kworker

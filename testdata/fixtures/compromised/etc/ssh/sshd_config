@@ -1,0 +1,8 @@
+Include /etc/ssh/sshd_config.d/*.conf
+KbdInteractiveAuthentication no
+UsePAM yes
+X11Forwarding yes
+Subsystem sftp /usr/lib/openssh/sftp-server
+
+Match User backup
+    PermitEmptyPasswords yes

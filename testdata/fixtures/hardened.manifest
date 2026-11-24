@@ -1,0 +1,14 @@
+# Permissions and procfs links git cannot store. See internal/testutil.
+mode 0640 etc/shadow
+mode 0440 etc/sudoers
+mode 0600 etc/ssh/ssh_host_ed25519_key
+mode 4755 usr/bin/passwd
+mode 0600 home/ops/.ssh/authorized_keys
+dir 1777 tmp
+dir 1777 var/tmp
+link proc/1/exe /usr/lib/systemd/systemd
+link proc/640/exe /usr/sbin/sshd
+link proc/640/fd/3 socket:[2001]
+link proc/640/fd/4 socket:[2003]
+link proc/700/exe /usr/lib/postgresql/15/bin/postgres
+link proc/700/fd/5 socket:[2002]
