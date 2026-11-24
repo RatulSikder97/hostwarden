@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "accepted": [
+    {
+      "check_id": "HW-CTR-006",
+      "reason": "legacy images run as root; tracked in PLAT-142",
+      "expires": "2027-03-31"
+    },
+    {
+      "check_id": "HW-FS-002",
+      "target": "/opt/vendor/agent/*",
+      "reason": "vendor monitoring agent ships a setuid helper"
+    },
+    {
+      "fingerprint": "6f1c0b7e2a9d4c13",
+      "reason": "bastion host intentionally allows password auth behind MFA"
+    }
+  ]
+}
